@@ -8,7 +8,8 @@ class Formpage extends Component {
 
             <div>
                 <Navbar1/>
-                <form className='container modal-dialog'>
+
+                <form className='container modal-sm' style={{position:'absolute',bottom:'40%',right:'40%'}}>
                     <h3>Se connecter</h3>
 
                     <div className="form-group">

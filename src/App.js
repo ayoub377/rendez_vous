@@ -3,7 +3,7 @@ import './App.css';
 import Home from "./Composants/Home";
 import Formpage from "./Composants/Form";
 import {BrowserRouter,Router, Route, Switch } from "react-router-dom";
-import Signup from "./Composants/Signup";
+import Signup from "./Composants/sign";
 
 
 function App() {

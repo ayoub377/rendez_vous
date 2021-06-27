@@ -76,7 +76,7 @@ return(
             <Form.Group controlId="formBasicPassword" className='grp_per'>
             <div className="form_2"> 
             <div className="left_side_per_2">
-                <Form.Label>Password</Form.Label>
+                <h5>Password</h5>
             </div>
             <div className="right_side_per_2">
                 <Form.Control onChange={handleChange} value={formBasicPassword}  type="password" placeholder="Password" className="bar_per" />
@@ -90,7 +90,7 @@ return(
              
             <div className="form_2"> 
             <div className="left_side_per_2"> 
-            <Form.Label>phone</Form.Label>
+            <h5>Phone</h5>
             </div>
             <div className="right_side_per_2">
                 <Form.Control onChange={handleChange} value={formBasicPhone}   type="tel" placeholder="telephone" className="bar_per" />

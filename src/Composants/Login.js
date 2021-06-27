@@ -2,7 +2,7 @@ import React,{useState, useContext} from 'react';
 import {Link } from "react-router-dom";
 import Navbar1 from "./Navbar";
 import Firebasecontext from "./Firebase/contexte_firebase";
-
+import "./styles_css/form_per.css"
 
 const Login =(props)=>{
 
@@ -43,7 +43,7 @@ const handleSubmit=e=>{
               <div className="form-group" className='grp_per'>
                  <div className="form_2">
                      <div className="left_side_per_2"> 
-                          <label>Email</label>
+                          <h5>Email</h5>
                      </div>
 
                      <div className="right_side_per_2">
@@ -58,7 +58,7 @@ const handleSubmit=e=>{
         <div className="form-group" className='grp_per'>
              <div className="form_2">
                  <div className="left_side_per_2"> 
-                  <label>Password</label>
+                  <h5>Password</h5>
                 </div>
 
                 <div className="right_side_per_2">
@@ -76,7 +76,7 @@ const handleSubmit=e=>{
 
                   <div className="custom-control custom-checkbox">
                       <input type="checkbox" className="custom-control-input" id="customCheck1" className="chek_in"/>
-                      <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                      <label className="custom-control-label" htmlFor="customCheck1" className="chek_in"> Remember me</label>
                   </div>
             </div>
         

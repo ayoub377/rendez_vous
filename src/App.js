@@ -9,8 +9,7 @@ import Signup from "./Composants/sign";
 function App() {
   return (
       <div className="App">
-
-          <BrowserRouter>
+<div className="background"> <BrowserRouter>
               <Switch>
               <Route exact path='/'>
                   <Home/>
@@ -22,7 +21,8 @@ function App() {
                   <Signup/>
                   </Route>
               </Switch>
-          </BrowserRouter>
+          </BrowserRouter></div>
+         
         </div>
   );
 }

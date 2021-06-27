@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Navbar1 from "./Navbar";
 import {Link} from "react-router-dom";
+import "./styles_css/form_per.css";
+
 
 class Formpage extends Component {
     render() {
@@ -9,30 +11,56 @@ class Formpage extends Component {
             <div>
                 <Navbar1/>
 
-                <form className='container modal-sm' style={{position:'absolute',bottom:'40%',right:'40%'}}>
-                    <h3>Se connecter</h3>
+                <form className='container modal-sm' className="form_per" >
+                    <h3 className="head_per">Se connecter</h3>
+{/*form_1 */}
 
-                    <div className="form-group">
-                        <label>Email address</label>
-                        <input type="email" className="form-control" placeholder="Enter email" />
-                    </div>
+                    <div className="form_2">
+                    <div className="left_side_per_2">
+                        <label>Email</label>
+                        </div>
 
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input type="password" className="form-control" placeholder="Enter password" />
-                    </div>
-
-                    <div className="form-group">
-                        <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                            <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                        <div className="right_side_per_2">
+                        <input type="email" className="form-control" placeholder="Enter email" className="bar_per" />
                         </div>
                     </div>
+{/*form_2 */}
+                    <div className="form_2"><div className="left_side_per_2">
+                        <label>Password</label>
+                        </div>
+                        
+                        <div className="right_side_per_2">
+                        <input type="password" className="form-control" placeholder="Enter password" className="bar_per" />
+                    </div> </div>
+{/*form_3 */}
+                    <div className="form_2">
+                    <div className="left_side_per_2">
+                        <div className="custom-control custom-checkbox">
+                            <input type="checkbox" className="custom-control-input" id="customCheck1" />
 
-                    <button type="submit" className="btn btn-primary btn-block">Submit</button>
+
+                            <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                        
+                        </div>
+                        </div>
+                    
+                    <div className="right_side_per_2">
+                    <div className="bouton_pos">
+
+                    <button type="submit" className="bout" >Submit</button>
+</div></div>
+
+</div>
+
+<div className="form_2">
+<div className="right_side_per_2 forget_box">
                     <p className="forgot-password text-right">
-                        Forgot <Link to='#pass'>password?</Link>
+                        Forgot <Link to='#pass' className="p_pass">password?</Link>
                     </p>
+
+</div></div>
+
+
                 </form>
             </div>
         );

@@ -2,6 +2,11 @@ import React, {useState, useContext} from "react";
 import Navbar1 from "./Navbar";
 import {Form,Button} from "react-bootstrap";
 import Firebasecontext from "./Firebase/contexte_firebase";
+
+import "./styles_css/form_per.css"
+
+
+
 const Signup= ()=>{
 
     const firebase = useContext(Firebasecontext)
@@ -32,40 +37,87 @@ const handleSubmit=e=>{
 
 }
     const { formBasicEmail,formBasicPassword,formBasicPhone }=loginData
-const btn = formBasicEmail==='' || formBasicPassword==='' || formBasicPhone=== ''? <Button disabled variant='primary' type='submit'>
-    creer compte
-</Button>: <Button variant='primary' type='submit'>
-    creer compte
-</Button>
- const msgerr= error !=='' && <span>{error.message}</span>;
+const btn = formBasicEmail==='' || formBasicPassword==='' || formBasicPhone=== ''? 
+<Button disabled variant='primary' type='submit'>creer compte</Button>: <Button variant='primary' type='submit' className="bout">creer compte</Button>
+ const msgerr= error !=='' && <span className="erreur_msg">{error.message}</span>;
+
+
+
+
+
+
 return(
     <div>
         <Navbar1/>
 
-        <Form onSubmit={handleSubmit} className='container modal-sm' style={{position:'absolute',bottom:'40%',right:'40%'}} >
+        <Form onSubmit={handleSubmit} 
+        className="form_per">
             {msgerr}
-            <h3>Creer un compte</h3>
-            <Form.Group controlId="formBasicEmail" className='col-sm-10'>
-                <Form.Label>Email address</Form.Label>
-                <Form.Control onChange={handleChange} value={formBasicEmail} type="email" placeholder="Enter email" />
+
+            <h3 className="head_per">Creer un compte</h3>
+
+        {/* form_1 */}
+
+            <Form.Group controlId="formBasicEmail" className='grp_per'>
+            <div className="form_2"> 
+
+                 <div className="left_side_per_2">
+                <h5>Email</h5>
+                </div>
+
+                <div className="right_side_per_2">
+                <Form.Control onChange={handleChange} value={formBasicEmail} type="email" placeholder="Enter email" className="bar_per" />
+                </div>
+            </div>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword" className='col-sm-10'>
+        {/* form_2 */}
+
+            <Form.Group controlId="formBasicPassword" className='grp_per'>
+            <div className="form_2"> 
+            <div className="left_side_per_2">
                 <Form.Label>Password</Form.Label>
-                <Form.Control onChange={handleChange} value={formBasicPassword}  type="password" placeholder="Password" />
+            </div>
+            <div className="right_side_per_2">
+                <Form.Control onChange={handleChange} value={formBasicPassword}  type="password" placeholder="Password" className="bar_per" />
+            </div>
+            </div>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPhone" className='col-sm-10'>
-                <Form.Label>numero de telephone</Form.Label>
-                <Form.Control onChange={handleChange} value={formBasicPhone}   type="tel" placeholder="telephone" />
+        {/* form_3 */}
+
+            <Form.Group controlId="formBasicPhone" className='grp_per'>
+             
+            <div className="form_2"> 
+            <div className="left_side_per_2"> 
+            <Form.Label>phone</Form.Label>
+            </div>
+            <div className="right_side_per_2">
+                <Form.Control onChange={handleChange} value={formBasicPhone}   type="tel" placeholder="telephone" className="bar_per" />
+            </div>
+            </div>
             </Form.Group>
 
-            <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            {btn}
 
+
+        {/* form_4 */}
+        <div className="form_2">
+        <div className="left_side_per_2">
+                 <Form.Group controlId="formBasicCheckbox">
+            
+
+                     <Form.Check type="checkbox" label="Check me out" className="chek_in" />
+
+                    
+                 </Form.Group>
+                 
+                 </div> 
+                 <div className="right_side_per_2">
+                 <div className="bouton_pos">
+                {btn}</div></div>
+        </div>
         </Form>
+       
     </div>
 )
 

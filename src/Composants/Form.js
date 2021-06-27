@@ -1,3 +1,5 @@
+
+/*
 import React, {Component} from 'react';
 import Navbar1 from "./Navbar";
 import {Link} from "react-router-dom";
@@ -68,3 +70,6 @@ class Formpage extends Component {
 }
 
 export default Formpage;
+
+
+ */

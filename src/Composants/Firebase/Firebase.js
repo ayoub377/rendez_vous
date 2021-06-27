@@ -20,9 +20,9 @@ const configuration={
     signupuser = (email,password)=>
     this.auth.createUserWithEmailAndPassword(email,password);
 
-    loginuser = (email,password)=> {
+    loginuser = (email,password)=>
         this.auth.signInWithEmailAndPassword(email, password);
-    }
+
 
     signout= ()=>{this.auth.signOut()};
 

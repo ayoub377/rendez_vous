@@ -1,0 +1,145 @@
+
+.background_per{
+
+    height: 100vh;
+    background-image: url("neon_bubbles_2.jpg");
+    background-size: cover;
+
+
+}
+
+.calendar_per{
+    margin-top: 10px;
+
+    display: inline-block;
+
+    border-radius: 20px;
+    padding: 5px;
+    /* Glass Box  */
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.0px );
+    -webkit-backdrop-filter: blur( 4.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.calendar {
+    /* box-sizing: border-box;
+     font-size: 1rem;
+
+   */
+    max-width: 400px;
+
+}
+/* hadi darouriya */
+.day {
+    display: inline-block;
+    /*  width: calc(100% / 7);*/
+    /* position: relative; */
+
+    /* height: 44px; */
+
+    /* background-color: rgb(175, 26, 26); */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.header {
+    background-color: #39234299;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+
+    text-align: center;
+    min-height: 2rem;
+    line-height: 2rem;
+    color: #cfccdb;
+    font-family: var(--font-book);
+    font-weight: 450;
+    font-size: 150%;
+    display: flex;
+}
+.body {
+
+    /*   flou lwesst*/
+
+    background:  linear-gradient(#39234299, rgba(255, 255, 255, 0));
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+
+}
+/*
+.calendar .day-names {
+  background-color: #88a71c;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+*/
+
+
+.previous {
+
+
+    flex: 1;
+    text-align: left;
+    margin-left: 1rem;
+    cursor: pointer;
+
+}
+
+.next {
+
+    flex: 1;
+    text-align: right;
+    margin-right: 1rem;
+    cursor: pointer;
+
+}
+
+/*.calendar .week div {
+background-color: #88a71c;
+  width: 100%;
+}*/
+
+
+.calendar .day div {
+    font-weight: 500;
+
+    width: 54px;
+    height: 45px;
+    position: relative;
+    color: #1a092099;
+    z-index: 100;
+    line-height: 44px;
+}
+
+.calendar .day div.before {
+    color: #dfe4e9b2;
+    font-weight: 200;
+
+}
+
+.calendar .day div.selected {
+    background-color: #00232979;
+    border-radius: 100px;
+    width: 45px;
+
+    color: white;
+    font-weight: bold;
+}
+
+.calendar .day div.today {
+    background-color: #6d0a5c79;
+    border-radius: 100px;
+    width: 45px;
+
+    color: white;
+}

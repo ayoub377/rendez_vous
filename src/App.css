@@ -2,7 +2,8 @@
 .App {
     text-align: center;
   }
-  
+
+
   .background{
     height: 100vh;
     background-image: url("./Composants/images/neon_bubbles_2.jpg");

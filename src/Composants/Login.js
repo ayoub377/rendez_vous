@@ -31,31 +31,69 @@ const handleSubmit=e=>{
       <div>
           <Navbar1/>
 
-          <form onSubmit={handleSubmit} className='container modal-sm' style={{position:'absolute',bottom:'40%',right:'40%'}}>
-              {error!=='' && <span>{error.message}</span>}
-              <h3>Se connecter</h3>
+          <form onSubmit={handleSubmit}
+          className="form_per">
+          
+              {error!=='' && <span className="erreur_msg">{error.message}</span>}
+              <h3 className="head_per">Se connecter</h3>
 
-              <div className="form-group">
-                  <label>Email address</label>
-                  <input onChange={e=>{setemail(e.target.value)}} type="email" className="form-control" placeholder="Enter email" value={email}/>
+
+        {/* form_1 */}
+
+              <div className="form-group" className='grp_per'>
+                 <div className="form_2">
+                     <div className="left_side_per_2"> 
+                          <label>Email</label>
+                     </div>
+
+                     <div className="right_side_per_2">
+                         <input onChange={e=>{setemail(e.target.value)}} type="email" className="form-control" placeholder="Enter email" value={email} className="bar_per"/>
+                    </div>
+                 </div>
               </div>
 
-              <div className="form-group">
+
+        {/* form_2 */}
+
+        <div className="form-group" className='grp_per'>
+             <div className="form_2">
+                 <div className="left_side_per_2"> 
                   <label>Password</label>
-                  <input onChange={e=>{setpassword(e.target.value)}} type="password" className="form-control" placeholder="Enter password" value={password} />
-              </div>
+                </div>
 
-              <div className="form-group">
+                <div className="right_side_per_2">
+                  <input onChange={e=>{setpassword(e.target.value)}} type="password" className="form-control" placeholder="Enter password" value={password} className="bar_per" />
+                </div>
+            </div>
+        </div>
+
+
+        {/* form_3 */}
+
+        <div className="form-group" className='grp_per'>
+        <div className="form_2">
+            <div className="left_side_per_2">
+
                   <div className="custom-control custom-checkbox">
-                      <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                      <input type="checkbox" className="custom-control-input" id="customCheck1" className="chek_in"/>
                       <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                   </div>
-              </div>
+            </div>
+        
+            <div className="right_side_per_2">
+                 <div className="bouton_pos">
+              <button type="submit" className="bout">Submit</button>
+            
+            </div></div>
+             </div> 
 
-              <button type="submit" className="btn btn-primary btn-block">Submit</button>
+             <div className="right_side_per_2">
               <p className="forgot-password text-right">
-                  Forgot <Link to='#pass'>password?</Link>
+                  Forgot <Link to='#pass' className="p_pass">password?</Link>
               </p>
+            </div>
+
+            </div>
           </form>
       </div>
   )

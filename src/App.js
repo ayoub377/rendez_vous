@@ -1,7 +1,6 @@
 
 import './App.css';
 import Home from "./Composants/Home";
-import Formpage from "./Composants/Form";
 import {BrowserRouter,Router, Route, Switch } from "react-router-dom";
 import Signup from "./Composants/sign";
 import Login from "./Composants/Login";

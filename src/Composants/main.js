@@ -4,13 +4,13 @@ import "./Calendar.css";
 import buildCalendar from './build';
 import dayStyles,{ beforeToday } from './styles';
 import Headercalendrier from './header';
-
+import Navbar1 from "./Navbar";
 
 function Calendar() {
     const dates_no=[28,3,5,17,19,20,8]
     const [calendar, setCalendar] = useState([]);
     const [value, setValue] = useState(moment());
-    const [open, setopen] = useState(false)
+   // const [open, setopen] = useState(false)
     useEffect(()=>{
         setCalendar(buildCalendar(value));
     }, [value]);
@@ -41,7 +41,9 @@ const check_date=(val)=>
 
 
     return (
-        <div className="background_per">
+        
+        <div>
+                      <Navbar1/>
             <div className="calendar_per">
                 <div className="calendar" >
 

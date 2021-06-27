@@ -4,11 +4,11 @@ import "./styles_css/Calendar.css";
 import buildCalendar from './build';
 import dayStyles,{ beforeToday } from './styles';
 import Headercalendrier from './header';
-import Navbar1 from "./Navbar";
+import Navbar2 from "./navbar_2";
 
 function Calendar() {
-    const dates_no=[28,3,5,17,19,20,8]
-    const [calendar, setCalendar] = useState([]);
+ const dates_no=['28','3','5','17','19','8'];
+  const [calendar, setCalendar] = useState([]);
     const [value, setValue] = useState(moment());
    // const [open, setopen] = useState(false)
     useEffect(()=>{
@@ -17,33 +17,21 @@ function Calendar() {
 
 
 
-const check_date=(val)=>
-{
-
-  dates_no.forEach((v)=>{
-
-      if(v===val.date())
-      {
-          {
-              alert('date non dispo')
-
-          }
-      }
-
-  })
-
-
-   }
-
-
-
-
+    const check_date=()=>{
+        let element= document.querySelector('.selected')
+        const found = dates_no.find(v=>v===element.textContent)
+        if(found !==undefined)
+        {
+            alert('date indisponible ! merci de choisir autre date')
+        }
+    
+        }
 
 
     return (
         
         <div>
-                      <Navbar1/>
+                      <Navbar2/>
             <div className="calendar_per">
                 <div className="calendar" >
 
@@ -54,8 +42,8 @@ const check_date=(val)=>
                             <div>
                                 {week.map((day) =>
                                     (<div className="day" onClick={()=> !beforeToday(day) && setValue(day)} >
-                                            {console.log(value.format().slice(0,10))}
-                                            <div  className={dayStyles(day, value)} onClick={check_date(value)}>
+                                            
+                                            <div  className={dayStyles(day, value)} onClick={check_date}>
                                                 {
                                                 day.format("D").toString()
                                             }

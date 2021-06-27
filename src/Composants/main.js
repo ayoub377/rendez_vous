@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import moment from 'moment';
-import "./Calendar.css";
+import "./styles_css/Calendar.css";
 import buildCalendar from './build';
 import dayStyles,{ beforeToday } from './styles';
 import Headercalendrier from './header';
